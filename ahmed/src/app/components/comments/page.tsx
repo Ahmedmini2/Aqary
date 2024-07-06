@@ -37,10 +37,10 @@ export default function Comments() {
 if(comments) 
   return (
 
-    <>
+    <div className='flex flex-col items-center'>
     <Typography variant='h5' sx={{margin: 2}}> Comments</Typography>
     { comments.map((comment: any) => (
-                <div className="flex p-4 w-[500px]" key={comment.id} >
+                <div className="flex p-4 w-[800px]" key={comment.id} >
                 <figure className="md:flex max-w-5xl bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
                 <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
                     <blockquote>
@@ -61,7 +61,7 @@ if(comments)
                 </figure>
             </div>
         ))}
-  </>
+  </div>
   )
 }
 

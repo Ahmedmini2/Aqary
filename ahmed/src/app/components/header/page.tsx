@@ -40,14 +40,14 @@ export default function DrawerAppBar(props: Props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+      <Typography variant="h6" sx={{ my: 2 }} onClick={() => router.push('/') }>
         Aqary
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-             <Link href={`./`} ></Link>
+          <ListItem key={item} disablePadding onClick={() => router.push('/') }>
+             
             <ListItemButton sx={{ textAlign: 'center' }}>
               <ListItemText primary={item} />
             </ListItemButton>
@@ -77,6 +77,7 @@ export default function DrawerAppBar(props: Props) {
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            onClick={() => router.push('/') }
           >
             Aqary
           </Typography>

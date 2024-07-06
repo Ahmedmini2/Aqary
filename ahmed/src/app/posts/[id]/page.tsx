@@ -41,17 +41,17 @@ export default function Page() {
         <>
             <Header />
             <main className=" bg-slate-300 flex-col items-center justify-between ">
-                <div className='py-2'>Post ID: {postId}</div>
+                
                 {post && (
-                    <section className="bg-gray-900 text-white ">
-                    <div className="px-4 py-32 lg:flex  lg:items-center">
+                    <section className=" bg-gray-900 text-white ">
+                    <div className="flex justify-center items-center px-4 py-32  lg:items-center">
                       <div className="mx-auto max-w-3xl text-center">
                         <h1
                           className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl"
                         >
                           {post.title}
                   
-                          <span className="sm:block"> Increase Conversion. </span>
+                          
                         </h1>
                   
                         <p className="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
