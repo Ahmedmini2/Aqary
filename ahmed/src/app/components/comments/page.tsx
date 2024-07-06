@@ -40,41 +40,26 @@ if(comments)
     <>
     <Typography variant='h5' sx={{margin: 2}}> Comments</Typography>
     { comments.map((comment: any) => (
-        <Paper
-        key={comment.id}
-            sx={{
-                p: 2,
-                m:2,
-                width: 500,
-                maxWidth: 500,
-                flexGrow: 1,
-                
-            }}
-            >
-                
-            <Grid container spacing={2} >
-            
-                <Grid item xs={12} sm container >
-                <Grid item xs container direction="column" spacing={2}>
-                    <Grid item xs>
-                    <Typography gutterBottom variant="subtitle1" component="div">
-                        User: {comment.name}
-                    </Typography>
-                    <Typography variant="body2" gutterBottom>
-                        Email:  {comment.email}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                    Comment: {comment.body}
-                    </Typography>
-                    </Grid>
+                <div className="flex p-4 w-[500px]" key={comment.id} >
+                <figure className="md:flex max-w-5xl bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
+                <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
+                    <blockquote>
+                    <p className="text-lg font-medium dark:text-slate-100">
+                        {comment.body}
+                    </p>
+                    </blockquote>
+                    <figcaption className="font-medium">
+                    <div className="text-sky-500 dark:text-sky-400">
+                        {comment.name}
+                    </div>
+                    </figcaption>
+                    <div className="text-slate-700 dark:text-slate-400">
+                        {comment.email}
+                    </div>
                     
-                </Grid>
-                
-                </Grid>
-               
-            </Grid>
-             
-        </Paper>
+                </div>
+                </figure>
+            </div>
         ))}
   </>
   )
